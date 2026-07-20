@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glitch Art Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ JPG GLITCH GENERATOR</h1>
+            <p>Upload an image and mess with the parameters to distort reality.</p>
+        </header>
+
+        <main class="app-grid">
+            <!-- Controls Sidebar -->
+            <div class="controls-panel">
+                <div class="control-group">
+                    <label for="imageLoader" class="upload-btn">📁 Choose JPG Image</label>
+                    <input type="file" id="imageLoader" accept="image/jpeg, image/jpg, image/png">
+                </div>
+
+                <div class="control-group">
+                    <div class="label-val">
+                        <label for="sliceCount">Slice Intensity</label>
+                        <span id="sliceCountVal">20</span>
+                    </div>
+                    <input type="range" id="sliceCount" min="0" max="100" value="20">
+                </div>
+
+                <div class="control-group">
+                    <div class="label-val">
+                        <label for="rgbSplit">RGB Split (Chromatic)</label>
+                        <span id="rgbSplitVal">15</span>
+                    </div>
+                    <input type="range" id="rgbSplit" min="0" max="50" value="15">
+                </div>
+
+                <div class="control-group">
+                    <div class="label-val">
+                        <label for="brightness">Overexposure</label>
+                        <span id="brightnessVal">0</span>
+                    </div>
+                    <input type="range" id="brightness" min="0" max="100" value="0">
+                </div>
+
+                <button id="glitchBtn" class="primary-btn">🔄 Re-Glitch</button>
+                <button id="downloadBtn" class="secondary-btn">💾 Download Image</button>
+            </div>
+
+            <!-- Display Area -->
+            <div class="canvas-panel">
+                <div class="canvas-wrapper">
+                    <canvas id="imageCanvas"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
